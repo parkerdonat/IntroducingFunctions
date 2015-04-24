@@ -72,12 +72,12 @@
 }
 
 
-- (void) countDownTillIntroduction: (NSInteger *)numberOfDays{
+- (void)countDownTillIntroduction: (NSInteger *)numberOfDays{
     if (numberOfDays == 0) {
         NSLog(@"The time has come");
     }
     if (numberOfDays != 0) {
-        NSLog(@" %d days left until introductions", numberOfDays);
+        NSLog(@" %ld days left until introductions", (long)numberOfDays);
         NSInteger *oneLessDay = numberOfDays - 1;
         [self countDownTillIntroduction:oneLessDay];
     }
