@@ -53,11 +53,9 @@
     NSString *myName = @"Parker";
     
     
-    [self countDownTillIntroduction:4];
+    [self countDownTillIntroduction: 4];
     [self printIntroduction:myName];
-    
 
-    
     return YES;
 }
 
@@ -67,18 +65,17 @@
     NSString *introduction = [NSString stringWithFormat:@"My name is %@", name];
     NSString *japaneseIntro = [name stringByAppendingString:@" to moushimasu"];
     NSLog (@"%@\n%@",introduction, japaneseIntro);
-    
 
 }
 
 
-- (void)countDownTillIntroduction: (NSInteger *)numberOfDays{
+- (void)countDownTillIntroduction: (NSInteger)numberOfDays{
     if (numberOfDays == 0) {
         NSLog(@"The time has come");
     }
     if (numberOfDays != 0) {
         NSLog(@" %ld days left until introductions", (long)numberOfDays);
-        NSInteger *oneLessDay = numberOfDays - 1;
+        NSInteger oneLessDay = numberOfDays - 1;
         [self countDownTillIntroduction:oneLessDay];
     }
 }
